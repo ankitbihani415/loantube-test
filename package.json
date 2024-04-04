@@ -1,0 +1,49 @@
+{
+  "name": "loantube-test",
+  "description": "This is test app created for loantube test",
+  "version": "1.0.0",
+  "homepage": "",
+  "private": true,
+  "keywords": [
+    "feathers"
+  ],
+  "author": {"name":"Ankit Bihani", "email":"ankitbihani415@gmail.com"},
+  "contributors": [],
+  "bugs": {},
+  "engines": {
+    "node": ">= 16.15.1"
+  },
+  "feathers": {
+    "language": "js",
+    "packager": "npm",
+    "database": "sqlite",
+    "framework": "koa",
+    "transports": [
+      "rest"
+    ],
+    "schema": "json"
+  },
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "main": "lib/index",
+  "type": "module",
+  "scripts": {
+    "start": "node src",
+    "dev": "nodemon src/",
+    "prettier": "npx prettier \"**/*.js\" --write",
+    "mocha": "cross-env NODE_ENV=test mocha test/ --recursive --exit",
+    "test": "npm run mocha",
+    "bundle:client": "npm pack --pack-destination ./public"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "@feathersjs/configuration": "^5.0.24",
+    "@feathersjs/feathers": "^5.0.24",
+    "@feathersjs/koa": "^5.0.24",
+    "winston": "^3.13.0"
+  }
+}
